@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop File Upload</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+
+    <!-- Nav bar {begin} -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+            <li><a href="notifications/index.html"><i class="fa fa-bell" aria-hidden="true"></i>Notifications</a></li>
+            <li><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> LOG OUT</a></li>
+            <li><a href="settings/index.html"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
+        </ul>
+    </nav>
+    <!-- Nav bar {end} -->
+
+    <!-- Dashboard {begin} -->
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="projects/index.html"><i class="fa fa-book" aria-hidden="true"></i> Projects</a></li>
+            <li><a href="teams/index.html"><i class="fa fa-users" aria-hidden="true"></i> Teams</a></li>
+            <li><a href="calendar/index.html"><i class="fa fa-calendar"></i> Calendar</a></li>
+        </ul>
+    </div>
+    <!-- Dashboard {end} -->
+    
+    <button class="SST-new-project"><i class="fa-solid fa-plus"></i></button>
+    <span style="margin-left: 300px;">New Project</span>
+
+    <div class="SST-container">
+        <h1>Task Manager</h1>
+        <div class="SST-lists-container"></div>
+    </div>
+
+    <div id="SST-project-modal" class="SST-modal">
+        <div class="SST-modal-content">
+            <span class="SST-close-button">&times;</span>
+            <div class="SST-list">
+                <input type="text" id="SST-list-name" placeholder="Enter Project name" maxlength="30">
+                <span class="SST-char-count" id="SST-list-name-count">Project 0/30</span>
+                <input type="text" id="SST-list-description" placeholder="Enter Project description">
+                <input type="date" id="SST-list-start-date">
+                <input type="date" id="SST-list-end-date">
+                <button id="SST-add-list-btn">Add Project</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header-section">
+            <h1>Upload Files</h1>
+            <p>Upload files you want to share with your team members.</p>
+            <p>PDF, Images & Videos are allowed.</p>
+        </div>
+        <div class="drop-section">
+            <div class="col">
+                <div class="cloud-icon">
+                    <img src="icons/cloud.png" alt="cloud">
+                </div>
+                <span>Drag & Drop your files here</span>
+                <span>OR</span>
+                <button class="file-selector">Browse Files</button>
+                <input type="file" class="file-selector-input" multiple>
+            </div>
+            <div class="col">
+                <div class="drop-here">Drop Here</div>
+            </div>
+        </div>
+        <div class="list-section">
+            <div class="list-title">Uploaded Files</div>
+            <div class="list"></div>
+        </div>
+    </div>
+
+    <div class="message-container">
+        <input type="text" placeholder="Send messages to your team">
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

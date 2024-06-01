@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+   
+}
+/*new project button*/
+.SST-new-project {
+    color: #9385ff;
+    margin-top: 50px;
+    margin-left: 300px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.SST-new-project:hover {
+    background-color: #0056b3;
+}
+
+.SST-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 250px;
+    
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+.SST-lists-container {
+    margin-top: 20px;
+}
+
+.SST-list {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+select {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.SST-task-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.SST-task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.SST-task-item .SST-edit-task-btn,
+.SST-task-item .SST-done-task-btn {
+    margin-left: auto;
+}
+
+.SST-done {
+    text-decoration: line-through;
+    color: #777;
+}
+
+#SST-list-name {
+    position: relative;
+}
+
+#SST-list-name-count {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: #777;
+    font-size: 12px;
+}
+
+/* Modal Styles */
+.SST-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.SST-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.SST-close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.SST-close-button:hover,
+.SST-close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*new project button*/
+
+/*Message container*/
+.message-container{
+    width: 300px;
+    height: 100%;
+    position: fixed; /* Ensures it stays in place when scrolling */
+    top: 0;
+    right: 0; /* Attaches to the left side */
+    background-color: #122eac; /* Example background color */
+    
+}
+.message-container input{
+    width: 280px;
+    height: 50px;
+    margin-left: 7px;
+    margin-top: 870px;
+}
+/*Message container*/
+
+
+/*Navbar begin*/
+.navbar{
+    margin: 0;
+    
+    font-family: Arial, sans-serif;
+}
+.navbar ul{
+    list-style-type: none;
+    background-color: #122eac;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    text-align: center;
+
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    width: 100px;
+    padding: 25px 35px;
+    display: flex;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    position: relative; /* Add position relative */
+}
+.navbar a i {
+    margin-right: 5px; /* Add margin to the right of the icon */
+}
+.navbar a:hover{
+    background-color: #0056b3;
+}
+.navbar li{
+    display: inline-block;
+}
+/*Navbar end*/
+
+/* Sidebar*/
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    background-color: #122eac;
+    color: #fff;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent; /* Add a transparent bottom border */
+    transition: border-bottom-color 0.3s; /* Add a transition for smooth effect */
+}
+
+.sidebar ul li a:hover {
+    border-bottom-color: #fff; /* Change the bottom border color on hover */
+}
+
+/*Sidebar*/
+
+
+.container{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    min-height: 435px;
+    top: 50%; /* Adjust as needed */
+    left: 1100px; /* Adjust as needed */
+    transform: translateY(-50%); /* Centers vertically */
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.header-section{
+    padding: 25px 0px;
+    
+}
+
+.header-section h1{
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: #707EA0;
+    margin: 0px;
+    margin-bottom: 8px;
+}
+
+.header-section p{
+    margin: 5px;
+    font-size: 0.95rem;
+    color: #707EA0;
+}
+
+.drop-section{
+    min-height: 250px;
+    border: 1px dashed #A8B3E3;
+    background-image: linear-gradient(180deg, white, #F1F6FF);
+    margin: 5px 35px 35px 35px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.drop-section div.col:first-child{
+    opacity: 1;
+    visibility: visible;
+    transition-duration: 0.2s;
+    transform: scale(1);
+    width: 200px;
+    margin: auto;
+}
+
+.drop-section div.col:last-child{
+    font-size: 40px;
+    font-weight: 700;
+    color: #c0cae1;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 200px;
+    height: 55px;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.6);
+    transition-duration: 0.2s;
+}
+
+.drag-over-effect div.col:first-child{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(1.1);
+}
+
+.drag-over-effect div.col:last-child{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.drop-section .cloud-icon{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.drop-section span,
+.drop-section button{
+    display: block;
+    margin: auto;
+    color: #707EA0;
+    margin-bottom: 10px;
+}
+
+.drop-section button{
+    color: white;
+    background-color: #5874C6;
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.drop-section input{
+    display: none;
+}
+
+.list-section{
+    display: none;
+    text-align: left;
+    margin: 0px 35px;
+    padding-bottom: 20px;
+    
+}
+
+.list-section .list-title{
+    font-size: 0.95rem;
+    color: #707EA0;
+}
+
+.list-section li{
+    display: flex;
+    margin: 15px 0px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+    border-radius: 8px;
+    transition-duration: 0.2s;
+}
+
+.list-section li:hover{
+    box-shadow: #E3EAF9 0px 0px 4px 0px, #E3EAF9 0px 12px 16px 0px;
+}
+
+.list-section li .col{
+    flex: .1;
+}
+
+.list-section li .col:nth-child(1){
+    flex: .15;
+    text-align: center;
+}
+
+.list-section li .col:nth-child(2){
+    flex: .75;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #3e4046;
+    padding: 8px 10px;
+}
+
+.list-section li .col:nth-child(2) div.name{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    display: inline-block;
+}
+
+.list-section li .file-name span{
+    color: #707EA0;
+    float: right;
+}
+
+.list-section li .file-progress{
+    width: 100%;
+    height: 5px;
+    margin-top: 8px;
+    border-radius: 8px;
+    background-color: #dee6fd;
+}
+
+.list-section li .file-progress span{
+    display: block;
+    width: 0%;
+    height: 100%;
+    border-radius: 8px;
+    background-image: linear-gradient(120deg, #6b99fd, #9385ff);
+    transition-duration: 0.4s;
+}
+
+.list-section li .col .file-size{
+    font-size: 0.75rem;
+    margin-top: 3px;
+    color: #707EA0;
+}
+
+.list-section li .col svg.cross,
+.list-section li .col svg.tick{
+    fill: #8694d2;
+    background-color: #dee6fd;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.list-section li .col svg.tick{
+    fill: #50a156;
+    background-color: transparent;
+}
+
+.list-section li.complete span,
+.list-section li.complete .file-progress,
+.list-section li.complete svg.cross{
+    display: none;
+}
+
+.list-section li.in-prog .file-size,
+.list-section li.in-prog svg.tick{
+    display: none;
+}
